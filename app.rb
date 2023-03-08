@@ -14,3 +14,11 @@ end
 get '/mastersHair' do
   erb :mastersHair
 end
+
+get '/mastersManicure' do
+  erb :mastersManicure
+end
+
+get '/mastersPedicure' do
+  erb :mastersPedicure
+end
