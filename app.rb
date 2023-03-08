@@ -22,3 +22,19 @@ end
 get '/mastersPedicure' do
   erb :mastersPedicure
 end
+
+get '/mastersCosmetologist' do
+  erb :mastersCosmetologist
+end
+
+get '/mastersMassage' do
+  erb :mastersMassage
+end
+
+get '/mastersSugarint' do
+  erb :mastersSugarint
+end
+
+get '/mastersStylist' do
+  erb :mastersStylist
+end
