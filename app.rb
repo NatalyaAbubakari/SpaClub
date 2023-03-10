@@ -11,6 +11,17 @@ get '/visit' do
   erb :visit
 end
 
+post '/visit' do
+  @username = params[:username]
+  @phone = params[:phone]
+  @datetime = params[:datetime]
+
+  @title = 'Thank you!'
+  @message = "Dear #{@username}, your phone #{@phone}. We'll be waiting for you at #{@datetime}"
+  
+  erb :message
+end  
+
 get '/mastersHair' do
   erb :mastersHair
 end
