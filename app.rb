@@ -15,9 +15,10 @@ post '/visit' do
   @username = params[:username]
   @phone = params[:phone]
   @datetime = params[:datetime]
+  @master = params[:master]
 
   @title = 'Thank you!'
-  @message = "Dear #{@username}, your phone #{@phone}. We'll be waiting for you at #{@datetime}"
+  @message = "Dear #{@username}, you are registered to #{@master}. We'll be waiting for you at #{@datetime} We will remind you about your visit the day before by the number #{@phone}"
   
   erb :message
 end  
