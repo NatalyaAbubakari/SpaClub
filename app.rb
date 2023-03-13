@@ -17,6 +17,16 @@ post '/visit' do
   @datetime = params[:datetime]
   @master = params[:master]
 
+  hh = {:username => 'Enter your name',
+        :phone => 'Enter your phone',
+        :datetime => 'Enter date and time'}
+  hh.each do |key, value|
+      if params[key] == ''
+          @error = hh[key]
+          erb :visit
+      end
+  end              
+
   @title = 'Thank you!'
   @message = "Dear #{@username}, you are registered to #{@master}. We'll be waiting for you at #{@datetime} We will remind you about your visit the day before by the number #{@phone}"
   
